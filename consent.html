@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>콜록 통화 분석 동의 안내</title>
+        <link rel="icon" type="image/png" href="./favicon.png" />
+        <style>
+            body {
+                max-width: 760px;
+                margin: 40px auto;
+                padding: 0 20px;
+                font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+                color: #202124;
+                background: #fff;
+                word-break: keep-all;
+                overflow-wrap: anywhere;
+            }
+            h1,
+            h2 {
+                line-height: 1.35;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                margin-top: 36px;
+                font-size: 23px;
+            }
+            li {
+                margin: 6px 0;
+            }
+            a {
+                color: #205c3b;
+                text-underline-offset: 3px;
+            }
+            a:focus-visible {
+                outline: 2px solid #205c3b;
+                outline-offset: 4px;
+            }
+            .table-scroll {
+                overflow-x: auto;
+            }
+            table {
+                width: 100%;
+                min-width: 620px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+            th,
+            td {
+                padding: 12px;
+                border: 1px solid #dadce0;
+                text-align: left;
+                vertical-align: top;
+            }
+            th {
+                background: #f8f9fa;
+            }
+            @media (max-width: 480px) {
+                body {
+                    margin-top: 28px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>콜록 통화 분석 동의 안내</h1>
+        <ul>
+            <li>동의서 버전: 2026-10-26.v5</li>
+            <li>운영자: 임도협(Dohyeop Lim)</li>
+            <li>
+                문의 이메일:
+                <a href="mailto:developer@collog.live">developer@collog.live</a>
+            </li>
+        </ul>
+        <p>
+            앱의 통화 분석 동의 화면에서 「자세히 보기」를 누르면 이 페이지가 열립니다. 개인정보 처리 전반은
+            <a href="./">개인정보처리방침</a>에서 확인할 수 있습니다.
+        </p>
+
+        <h2>1. 통화 분석은 선택 사항입니다</h2>
+        <ul>
+            <li>통화 녹음과 AI 분석은 선택 사항입니다.</li>
+            <li>두 참여자가 모두 동의한 통화에서만 음성을 녹음합니다.</li>
+            <li>동의하지 않아도 가족 통화는 그대로 이용할 수 있습니다.</li>
+            <li>「가입 없이 둘러보기」에서는 통화·녹음·분석을 하지 않으며 외부로 보내는 정보가 없습니다.</li>
+        </ul>
+
+        <h2>2. 외부 AI 서비스로 보내는 정보</h2>
+        <p>두 참여자가 모두 동의한 통화에 한해, 아래 서비스로 정보를 보냅니다.</p>
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>받는 곳</th>
+                        <th>보내는 정보</th>
+                        <th>목적</th>
+                        <th>설정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deepgram</td>
+                        <td>부모와 자녀의 통화 음성</td>
+                        <td>대화를 글로 변환</td>
+                        <td>요청에 모델 개선 참여 제외 옵션을 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>Google Gemini</td>
+                        <td>두 참여자의 전사문과 그 안의 증상, 복약, 활동, 수면 정보</td>
+                        <td>건강 기록 생성</td>
+                        <td>
+                            Google의 유료 서비스 데이터 처리 조건을 운영자가 확인하기 전에는 녹음과 건강 분석을
+                            비활성화합니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ElevenLabs</td>
+                        <td>오늘의 질문 문장. 휴대폰이 직접 요청할 때는 기기의 IP 주소가 전달됩니다.</td>
+                        <td>질문 음성 생성</td>
+                        <td>
+                            모델 학습 이용을 제외한 계정 설정으로 사용합니다. 사용할 수 없으면 휴대폰 기본 음성으로
+                            재생합니다.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul>
+            <li>이름, 전화번호, Apple·Google 로그인 토큰은 AI 요청에 포함하지 않습니다.</li>
+            <li>대화 중에 말한 개인정보는 음성과 전사문에 포함될 수 있습니다.</li>
+            <li>해외 제공사 서버에서 처리될 수 있습니다.</li>
+        </ul>
+
+        <h2>3. 수집 항목, 이용 목적, 보관 기간</h2>
+        <ul>
+            <li>
+                수집 항목: 통화 음성, 화자별 전사문, 증상, 복약, 활동, 수면, 음성 특징값, 질문 문장, 질문 음성 요청 시
+                IP 주소
+            </li>
+            <li>이용 목적: 가족 통화 기반 건강 변화 기록과 리포트 제공</li>
+            <li>보관 기간: 전사문과 건강 기록은 계정 삭제 시까지 보관합니다.</li>
+            <li>콜록 원본 음성은 분석 후 삭제하며, 실패하거나 남은 파일은 자동으로 정리합니다.</li>
+            <li>
+                외부 제공사의 보관 기간과 삭제 처리는 해당 계약 및 정책에 따르며 콜록 서버의 삭제와 별개입니다.
+            </li>
+        </ul>
+
+        <h2>4. 가족에게 제공하는 정보</h2>
+        <p>부모의 건강 기록과 음성 특징값은 가족 자녀에게 제공합니다.</p>
+
+        <h2>5. 의료 용도가 아닙니다</h2>
+        <p>콜록의 기록과 리포트는 의료 진단이나 치료 용도가 아닙니다.</p>
+
+        <h2>6. 동의 항목</h2>
+        <p>통화 분석을 사용하려면 아래 항목에 모두 동의해야 합니다.</p>
+        <ul>
+            <li>건강 민감정보 수집·이용</li>
+            <li>음성 특징값 추출</li>
+            <li>통화 녹음과 분석</li>
+            <li>자녀와 리포트 공유</li>
+            <li>Deepgram, Google Gemini, ElevenLabs에 데이터 전송</li>
+        </ul>
+
+        <h2>7. 동의를 바꾸거나 거절하려면</h2>
+        <ul>
+            <li>앱의 설정 → 「가족 공유 데이터 범위」에서 동의 내용을 확인하고 바꾸거나 철회할 수 있습니다.</li>
+            <li>거절하거나 철회하면 이후 녹음과 AI 분석을 중단합니다.</li>
+            <li>기존 기록 삭제는 설정 → 「계정 정보」 → 「계정 삭제」에서 요청할 수 있습니다.</li>
+        </ul>
+    </body>
+</html>
